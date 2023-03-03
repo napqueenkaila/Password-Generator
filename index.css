@@ -1,0 +1,90 @@
+/* color palette:
+#273549-dark blue password fields background
+#10B981-generate password button
+#1F2937-page background
+#2F3E53-divider line under text before passwords
+#4ADF86-"random password"
+#D5D4D8 - gray "never use insecure password" text color
+*/
+
+*{
+    box-sizing:border-box;
+}
+body {
+    background:#1f2937;
+    margin:100px auto;
+}
+
+#container{
+    width:550px;
+    height:550px;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+span{
+    color:#4adf86;
+}
+
+h1{
+    font-family: 'Karla', sans-serif;
+    line-height: 40px;
+    font-size:40px;
+    letter-spacing: -0.025em;
+    margin-bottom:10px;
+    margin-top:100px;
+    color:white;
+    max-width:350px;
+}
+
+h3{
+    color:#d5d4d8;
+    font-weight:none;
+    font-family: 'Inter', sans-serif;
+    font-size:20px;
+}
+
+
+button{
+    font-family: 'Inter', sans-serif;
+    background:#10B981;
+    color:white;
+    border:none;
+    border-radius: 6px;
+    width: 191px;
+    height: 42px;
+    left: 52px;
+    top: 284px;
+    font-size:16px;
+    line-height: 24px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-top:50px;
+}
+
+#line{
+    border:1px solid #2F3E53;
+    margin-top:35px;
+    width:500px;
+}
+
+.passwords{
+    display:flex;
+    justify-content: center;
+    margin-bottom:115px;
+    gap:25px;
+    margin-top:10px;
+}
+
+#passwordone-el, #passwordtwo-el{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width:210px;
+    height:40px;
+    background:#273549;
+    color:#55f991;
+}
