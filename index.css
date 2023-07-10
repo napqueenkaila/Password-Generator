@@ -1,90 +1,117 @@
-/* color palette:
-#273549-dark blue password fields background
-#10B981-generate password button
-#1F2937-page background
-#2F3E53-divider line under text before passwords
-#4ADF86-"random password"
-#D5D4D8 - gray "never use insecure password" text color
-*/
-
-*{
-    box-sizing:border-box;
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
 }
+
 body {
-    background:#1f2937;
-    margin:100px auto;
+    width: 100%;
+    background: #1f2937;
+    padding: 1.5em;
+    font-family: 'Inter', sans-serif;
 }
 
 #container{
-    width:550px;
-    height:550px;
-    margin:auto;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 0 auto;
+    max-width: 700px;
 }
 
-span{
-    color:#4adf86;
+span {
+    color: #4adf86;
 }
 
-h1{
+.title{
     font-family: 'Karla', sans-serif;
-    line-height: 40px;
-    font-size:40px;
+    font-size: 2.5rem;
+    color: white;
     letter-spacing: -0.025em;
-    margin-bottom:10px;
-    margin-top:100px;
-    color:white;
-    max-width:350px;
 }
 
-h3{
-    color:#d5d4d8;
-    font-weight:none;
+.subtitle{
     font-family: 'Inter', sans-serif;
-    font-size:20px;
+    font-size: 1.25rem;
+    color: #d5d4d8;
 }
 
-
-button{
+button {
     font-family: 'Inter', sans-serif;
-    background:#10B981;
-    color:white;
-    border:none;
+    font-size: 1rem;
+    color: white;
+    background: #10B981;
+    border: none;
     border-radius: 6px;
-    width: 191px;
-    height: 42px;
-    left: 52px;
-    top: 284px;
-    font-size:16px;
-    line-height: 24px;
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin-top:50px;
+    padding: 1em 2em;
 }
 
-#line{
-    border:1px solid #2F3E53;
-    margin-top:35px;
-    width:500px;
+hr{
+    border: 1px solid #2F3E53;
+    margin: 2em auto;
+    width: 95%;
 }
 
-.passwords{
-    display:flex;
-    justify-content: center;
-    margin-bottom:115px;
-    gap:25px;
-    margin-top:10px;
-}
-
-#passwordone-el, #passwordtwo-el{
-    display:flex;
+#passwordone-el,
+#passwordtwo-el {
+    font-size: 1.25rem;
+    color: #55f991;
+    background: #273549;
+    display: flex;
     justify-content: center;
     align-items: center;
-    width:210px;
-    height:40px;
-    background:#273549;
-    color:#55f991;
+    padding: 1em;
+    border-radius: 6px;
+}
+
+
+#copied-message{
+    color: #55f991;
+    text-align: center;
+    display: none;
+}
+
+@media screen and (min-width: 600px) {
+    body{
+        padding: 2em;
+    }
+    
+    .passwords{
+        display: flex;
+        justify-content: space-around;
+        gap: 1em;
+    }
+
+    .title{
+        font-size: 3rem;
+    }
+
+    .subtitle{
+        font-size: 1.75rem;
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    button{
+        font-size:1.25rem;
+    }
+
+    #passwordone-el,
+    #passwordtwo-el{
+        font-size: 1.35rem;
+        width: 50%;
+    }
+}
+
+/* FOOTER */
+footer {
+    font-size: 1rem;
+    color: #55f991;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+footer a {
+    color: #55f991;
 }
